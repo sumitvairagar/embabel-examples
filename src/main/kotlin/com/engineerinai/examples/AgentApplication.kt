@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
     val context = runApplication<AgentApplication>(*args)
     val agentPlatform = context.getBean(AgentPlatform::class.java)
 
-    val input = "How did Arsenal do this weekend?"
+    val input = "How did Manchester City do this weekend?"
     val agent = agentPlatform.agents().first { it.name.contains("FootballScout", ignoreCase = true) }
     val process = agentPlatform.runAgentFrom(
         agent = agent,
